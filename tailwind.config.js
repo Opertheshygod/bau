@@ -1,0 +1,185 @@
+window.tailwind = window.tailwind || {}
+window.tailwind.config = {
+        darkMode: 'class',
+        theme: {
+            backgroundSize: {
+                'auto': 'auto',
+                'cover': 'cover',
+                'contain': 'contain',
+                'full': '100%',
+                'full_plus': '120%'
+            },
+            extend: {
+                fontFamily: {
+                    scarpat: ['scarpat', 'sans-serif'],
+                    CoFo: ['CoFo Sans', 'sans-serif'],
+                },
+                zIndex: {
+                    '10': '10',
+                    '20': '20',
+                    '30': '30',
+                    '40': '40',
+                    '50': '50',
+                    '60': '60',
+                    '100': '100',
+                    '999': '999',
+                },
+                maxWidth: {
+                    '504': '504px',
+                    '1280': '1280px',
+                    'full': '100%',
+                    'in': 'initial',
+                },
+                aspectRatio: {
+                },
+                colors: {
+                    'color1': '#2F529D',
+                    'color2': '#C3AC70',
+                    'color3': '#E6E6E6',
+                    'color4': '#F5F5F5',
+                    'color5': '#28437d',
+                    'color6': '#B9A267',
+                    'color7': '#CBCBCB',
+                    'color8': '#A4A4A4',
+                    'color9': '#CCCCCC',
+                    'white40': '#ffffff40',
+                    'darkTheme': '#091225',
+                    'darkThemeText': '#d5d8dd',
+                },
+                backgroundImage: {
+                },
+                rotate: {
+                },
+                width: {
+                },
+                lineHeight: {
+                },
+                spacing: {
+                    '1': '1px',
+                    '2': '2px',
+                    '3': '3px',
+                    '4': '4px',
+                    '5': '5px',
+                    '6': '6px',
+                    '7': '7px',
+                    '8': '8px',
+                    '9': '9px',
+                    '10': '10px',
+                    '11': '11px',
+                    '12': '12px',
+                    '13': '13px',
+                    '14': '14px',
+                    '15': '15px',
+                    '16': '16px',
+                    '18': '18px',
+                    '20': '20px',
+                    '22':'22px',
+                    '24':'24px',
+                    '25':'25px',
+                    '26':'26px',
+                    '27':'27px',
+                    '28':'28px',
+                    '30':'30px',
+                    '32':'32px',
+                    '35':'35px',
+                    '36':'36px',
+                    '40':'40px',
+                    '42':'42px',
+                    '48':'48px',
+                    '50':'50px',
+                    '56':'56px',
+                    '60':'60px',
+                    '70':'70px',
+                    '80':'80px',
+                    '90':'90px',
+                    '96':'96px',
+                    '100':'100px',
+                    '106':'106px',
+                    '120':'120px',
+                    '140':'140px',
+                    '150':'150px',
+                    '160':'160px',
+                    '610':'610px',
+                    '100p_70': 'calc(100vh - 70px)',
+                },
+                borderRadius: {
+                    '2': '2px',
+                    '4': '4px',
+                    '5': '5px',
+                    '8': '8px',
+                    '10': '10px',
+                    '14': '14px',
+                    '15': '15px',
+                    '16': '16px',
+                    '20': '20px',
+                    '24': '24px',
+                    '25': '25px',
+                    '28': '28px',
+                    '30': '30px',
+                    '40': '40px',
+                    '44': '44px',
+                    '80': '80px',
+                    '100': '100px',
+                },
+                fontSize: {
+                    '13_16':['13px', '16px'],
+                    '13_18':['13px', '18px'],
+                    '14_36':['14px', '36px'],
+                    '16_16':['16px', '16px'],
+                    '16_24':['16px', '24px'],
+                    '18_20':['18px', '20px'],
+                    '18_24':['18px', '24px'],
+                    '22_24':['22px', '24px'],
+                    '22_26':['22px', '26px'],
+                    '24_24':['24px', '24px'],
+                    '28_22':['28px', '22px'],
+                    '28_32':['28px', '32px'],
+                    '32_36':['32px', '36px'],
+                    '36_36':['36px', '36px'],
+                    '56_36':['56px', '36px'],
+                    '65_65':['65px', '65px'],
+                    '96_72':['96px', '72px'],
+                    '128_128':['128px', '128px'],
+                    '160_128':['160px', '128px'],
+                },
+                screens: {
+                    'sm': '640px',
+                    'md': '768px',
+                    'lg': '1024px',
+                    'xl': '1200px',
+                    '2xl': '1600px',
+                    '3xl': '1920px',
+                    // main
+                    'm-xs': '375px',
+                    'm-sm': '640px',
+                    'm-md': '768px',
+                    'm-lg': '1024px',
+                    'm-xl': '1280px',
+                    'm-2xl': '1536px'
+                },
+                boxShadow: {
+                },
+                opacity: {
+                },
+                transitionTimingFunction: {
+                    'custom-1': 'cubic-bezier(0.4,0.1,0.4,1.2)',
+
+                }
+            },
+            letterSpacing: {
+                tight: '-.02em'
+            },
+            maxWidth: {
+                '400': '400px',
+                '610': '610px',
+                '1280': '1280px',
+            },
+            minWidth: {
+                '340': '340px'
+            },
+            minHeight: {
+            },
+            transitionTimingFunction: {
+            }
+        }
+    }
