@@ -31,6 +31,7 @@ window.tailwind.config = {
                     'in': 'initial',
                 },
                 aspectRatio: {
+                    '610/605': '610 / 605',
                 },
                 colors: {
                     'color1': '#2F529D',

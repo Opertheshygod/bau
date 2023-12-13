@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                backgroundSize: {
+                    'auto': 'auto',
+                    'cover': 'cover',
+                    'contain': 'contain',
+                    'full': '100%',
+                    'full_plus': '120%'
+                },
+                extend: {
+                    fontFamily: {
+                        scarpat: ['scarpat', 'sans-serif'],
+                        CoFo: ['CoFo Sans', 'sans-serif'],
+                    },
+                    zIndex: {
+                        '10': '10',
+                        '20': '20',
+                        '30': '30',
+                        '40': '40',
+                        '50': '50',
+                        '60': '60',
+                        '100': '100',
+                        '999': '999',
+                    },
+                    maxWidth: {
+                        '504': '504px',
+                        '1280': '1280px',
+                        'full': '100%',
+                        'in': 'initial',
+                    },
+                    aspectRatio: {},
+                    colors: {
+                        'color1': '#2F529D',
+                        'color2': '#C3AC70',
+                        'color3': '#E6E6E6',
+                        'color4': '#F5F5F5',
+                        'color5': '#28437D',
+                        'color6': '#B9A267',
+                    },
+                    backgroundImage: {},
+                    rotate: {},
+                    width: {},
+                    lineHeight: {},
+                    spacing: {
+                        '2': '2px',
+                        '3': '3px',
+                        '4': '4px',
+                        '5': '5px',
+                        '6': '6px',
+                        '7': '7px',
+                        '8': '8px',
+                        '9': '9px',
+                        '10': '10px',
+                        '11': '11px',
+                        '12': '12px',
+                        '13': '13px',
+                        '14': '14px',
+                        '15': '15px',
+                        '16': '16px',
+                        '18': '18px',
+                        '20': '20px',
+                        '22': '22px',
+                        '24': '24px',
+                        '25': '25px',
+                        '26': '26px',
+                        '27': '27px',
+                        '28': '28px',
+                        '30': '30px',
+                        '32': '32px',
+                        '35': '35px',
+                        '36': '36px',
+                        '40': '40px',
+                        '42': '42px',
+                        '48': '48px',
+                        '50': '50px',
+                        '56': '56px',
+                        '60': '60px',
+                        '70': '70px',
+                        '80': '80px',
+                        '90': '90px',
+                        '96': '96px',
+                        '100': '100px',
+                        '106': '106px',
+                        '120': '120px',
+                        '140': '140px',
+                        '150': '150px',
+                        '160': '160px',
+                        '610': '610px',
+                    },
+                    borderRadius: {
+                        '2': '2px',
+                        '4': '4px',
+                        '5': '5px',
+                        '8': '8px',
+                        '10': '10px',
+                        '14': '14px',
+                        '15': '15px',
+                        '16': '16px',
+                        '20': '20px',
+                        '24': '24px',
+                        '25': '25px',
+                        '28': '28px',
+                        '30': '30px',
+                        '40': '40px',
+                        '44': '44px',
+                        '80': '80px',
+                        '100': '100px',
+                    },
+                    fontSize: {
+                        '13_16': ['13px', '16px'],
+                        '13_18': ['13px', '18px'],
+                        '14_36': ['14px', '36px'],
+                        '16_16': ['16px', '16px'],
+                        '16_24': ['16px', '24px'],
+                        '18_20': ['18px', '20px'],
+                        '18_24': ['18px', '24px'],
+                        '22_24': ['22px', '24px'],
+                        '22_26': ['22px', '26px'],
+                        '24_24': ['24px', '24px'],
+                        '28_22': ['28px', '22px'],
+                        '28_32': ['28px', '32px'],
+                        '32_36': ['32px', '36px'],
+                        '36_36': ['36px', '36px'],
+                        '56_36': ['56px', '36px'],
+                        '65_65': ['65px', '65px'],
+                        '96_72': ['96px', '72px'],
+                        '128_128': ['128px', '128px'],
+                        '160_128': ['160px', '128px'],
+                    },
+                    screens: {
+                        'sm': '640px',
+                        'md': '768px',
+                        'lg': '1024px',
+                        'xl': '1200px',
+                        '2xl': '1600px',
+                        '3xl': '1920px',
+                        // main
+                        'm-xs': '375px',
+                        'm-sm': '640px',
+                        'm-md': '768px',
+                        'm-lg': '1024px',
+                        'm-xl': '1280px',
+                        'm-2xl': '1536px'
+                    },
+                    boxShadow: {},
+                    opacity: {}
+                },
+                letterSpacing: {
+                    tight: '-.02em'
+                },
+                maxWidth: {
+                    '400': '400px',
+                    '610': '610px',
+                    '1280': '1280px',
+                },
+                minWidth: {
+                    '340': '340px'
+                },
+                minHeight: {},
+                transitionTimingFunction: {}
+            }
+        }
+    </script>
+</head>
+<body>
+<section class="fixed h-full w-full hidden">
+    <div class="relative overflow-hidden bg-black bg-opacity-50">
+        <div class="translate-y-full md:translate-y-0 transition-all duration-[700] md:-translate-x-full ">
+            <div class="overflow-y-auto scroll-content w-full md:w-[533px]">
+                <div class="px-[24px] pt-[24px] md:px-[36px] md:pt-[36px] flex flex-col mb-[32px] md:mb-[40px] overflow-x-hidden">
+                    <p class="text-22_26 ">Оставить заявку</p>
+                </div>
+                <div class="px-[24px] pb-[54px] md:px-[36px] md:pb-[36px] flex flex-col">
+                    <div class="flex flex-col">
+                        <div class="flex flex-col gap-[24px] md:gap-[32px]">
+                                <label class="flex flex-col gap-y-[10px] ">
+                                    <span class="text-16_16 md:text-18_20" id="name-label">Имя*</span>
+                                    <input type="text" class="w-full h-[52px] grid items-center border border-solid rounded-[4px] text-[18px] px-[12px] outline-0 appearance-auto border-gray-2 focus:border-green-1" name="main_panel_name" aria-labelledby="name-label">
+                                </label>
+                                <label class="flex flex-col gap-y-[10px] ">
+                                    <span class="text-16_16 md:text-18_20" >Телефон*</span>
+                                    <input type="text" class="w-full h-[52px] grid items-center border border-solid rounded-[4px] text-[18px] px-[12px] outline-0 appearance-auto border-gray-2 focus:border-green-1" name="main_panel_phone" aria-labelledby="name-label">
+                                </label>
+                                <label class="flex flex-col gap-y-[10px] ">
+                                    <span class="text-16_16 md:text-18_20" >E-mail*</span>
+                                    <input type="text" class="w-full h-[52px] grid items-center border border-solid rounded-[4px] text-[18px] px-[12px] outline-0 appearance-auto border-gray-2 focus:border-green-1" name="main_panel_phone" aria-labelledby="name-label">
+                                </label>
+                        </div>
+                        <button class="bg-color2 hover:bg-color2 rounded-[16px] h-[52px] mt-[42px] md:mt-[64px] text-16_16 md:text-18_20 rounded-[16px] border-0 cursor-pointer flex items-center justify-center text-white transition-colors">
+                            <span class="flex gap-x-[4px] md:gap-x-[10px]">
+                                <span>Оставить заявку</span>
+                            </span>
+                        </button>
+                        <p class="text-[12px] leading-[12px] text-gray-4 text-center mt-[9px] px-[4px]"> Нажимая на кнопку, вы
+                            выражаете согласие с <span class="underline"><a href="/politika-konfidencialnosti/">политикой конфиденциальности и правилами обработки персональных данных</a></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--<section class=" grid grid-cols-6 lg:grid-cols-12 gap-x-20 mt-150 m-xl:mt-160">-->
+
+<!--    <div class="col-span-6 lg:col-span-12 flex justify-between">-->
+<!--        <div class="relative w-[270px]  m-xl:w-[618px]">-->
+<!--            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 618 140" fill="none">-->
+<!--                <path d="M0 22C0 9.84973 9.84974 0 22 0H129.857C135.932 0 140.857 4.92487 140.857 11C140.857 17.0751 145.782 22 151.857 22H596C608.15 22 618 31.8497 618 44V115C618 127.15 608.15 137 596 137H22C9.84973 137 0 127.15 0 115V22Z" fill="#F5F5F5"></path>-->
+<!--                <path d="M30.52 18.4H106.808V108H94.008V30.304H43.32V108H30.52V18.4ZM137.078 99.68V132.32H124.79V41.44H136.822V49.76C139.638 46.176 147.958 39.52 161.27 39.52C180.982 39.52 195.19 54.496 195.19 74.72C195.19 94.944 180.982 109.92 161.27 109.92C148.214 109.92 139.894 103.264 137.078 99.68ZM159.99 50.528C147.062 50.528 137.078 60.256 137.078 74.72C137.078 89.184 147.062 98.912 159.99 98.912C172.918 98.912 182.902 89.184 182.902 74.72C182.902 60.256 172.918 50.528 159.99 50.528ZM203.506 74.72C203.506 53.6 219.634 39.52 239.218 39.52C258.802 39.52 274.93 53.6 274.93 74.72C274.93 95.84 258.802 109.92 239.218 109.92C219.634 109.92 203.506 95.84 203.506 74.72ZM215.794 74.72C215.794 89.184 225.65 98.912 239.218 98.912C252.786 98.912 262.642 89.184 262.642 74.72C262.642 60.256 252.786 50.528 239.218 50.528C225.65 50.528 215.794 60.256 215.794 74.72ZM319.679 109.92C298.943 109.92 283.071 95.584 283.071 74.72C283.071 53.472 298.559 39.52 318.271 39.52C335.039 39.52 352.191 51.68 352.191 73.184V76.128H295.359C295.487 90.336 306.239 98.912 319.679 98.912C332.607 98.912 339.007 91.36 340.927 83.68L352.575 85.344C350.015 97.76 338.623 109.92 319.679 109.92ZM318.015 50.272C306.367 50.272 299.199 57.44 297.151 65.632H338.879C337.599 57.312 329.919 50.272 318.015 50.272ZM416.185 41.44H435.001L403.513 63.328L430.777 108H416.953L393.785 69.984L377.273 81.504V108H364.985V41.44H377.273V68.448L416.185 41.44ZM459.991 108V52.064H433.239V41.44H499.031V52.064H472.279V108H459.991ZM589.404 108H577.116V41.44H589.404V108ZM567.772 83.936C567.772 97.248 560.092 108 541.148 108H507.74V41.44H520.028V59.872H541.148C560.092 59.872 567.772 70.624 567.772 83.936ZM555.484 83.936C555.484 76.256 551.516 70.496 541.02 70.496H520.028V97.376H541.02C551.516 97.376 555.484 91.616 555.484 83.936Z" fill="#2F529D"></path>-->
+<!--            </svg>-->
+<!--        </div>-->
+<!--        <div class="flex flex-col-reverse">-->
+<!--            <svg class=" w-40  m-xl:w-90 aspect-square	">-->
+<!--                <use xlink:href="#arrDown"></use>-->
+<!--            </svg>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <p class="hidden lg:block col-start-4 col-end-13 text-22_26 m-xl:text-32_36 mt-90 ">-->
+<!--        Огромные площади стен и потолков со сложнейшими условиями освещения. Круглогодичный открытый бассейн.-->
+<!--        Невероятных размеров остекление, minimal windows. Трехтонный двери, которые можно отрыть одним касанием.-->
+<!--        Паркетный пол без стыков огромной площади. Необслуживаемые фасады. Имплементация безошибочной и безупречной работы всех элементов.-->
+<!--        Гарантированное удовольствие и беззаботность в каждую минуту (от пользования).-->
+<!--    </p>-->
+
+<!--    <div class="col-span-6 lg:col-span-12 grid grid-cols-6 lg:grid-cols-12 gap-x-20 gap-y-60 m-xl:gap-y-90 mt-60 lg:mt-80">-->
+<!--        <div class="relative col-span-6 lg:col-start-7">-->
+<!--            <div class="flex snap-x snap-mandatory overflow-x-auto rounded-20  noScrollbar">-->
+<!--                <div class="snap-always snap-center shrink-0 w-full">-->
+<!--                    <img src="Houses/House1.jpg" class="w-full hover:scale-110 transition-all duration-500" alt="">-->
+<!--                </div>-->
+<!--                <div class="snap-always snap-center shrink-0 w-full">-->
+<!--                    <img src="Houses/House2.jpg" class="w-full hover:scale-110 transition-all duration-500" alt="">-->
+<!--                </div>-->
+<!--                <div class="snap-always snap-center shrink-0 w-full">-->
+<!--                    <img src="Houses/House3.jpg" class="w-full hover:scale-110 transition-all duration-500" alt="">-->
+<!--                </div>-->
+<!--                <div class="snap-always snap-center shrink-0 w-full">-->
+<!--                    <img src="Houses/House4.jpg" class="w-full hover:scale-110 transition-all duration-500" alt="">-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--            <div class="absolute left-0 top-0 w-full pointer-events-none">-->
+<!--                <svg xmlns="http://www.w3.org/2000/svg" class="w-full" viewBox="0 0 612 607" fill="none">-->
+<!--                    <path d="M596.534 522.073L596.568 522.063L596.599 522.048C601.672 519.642 605.164 517.378 607.503 514.32C608.876 512.523 609.838 510.472 610.5 507.997V575.807C610.319 579.533 609.85 582.327 608.924 584.987C607.999 587.645 606.608 590.193 604.55 593.424C600.911 597.642 597.845 600.356 594.355 602.168C590.863 603.982 586.905 604.913 581.445 605.5H424.353C429.817 603.71 433.754 601.683 436.436 598.683C439.632 595.108 440.976 590.233 441.155 582.993H441.155V582.981V545.641C441.18 543.267 441.268 541.95 441.649 539.603C443.034 534.237 444.69 530.667 447.41 528.103C450.128 525.54 453.971 523.924 459.861 522.608H461.318H594.369H594.414L594.458 522.6C595.227 522.46 595.693 522.337 596.534 522.073Z" fill="white" stroke="white"></path>-->
+<!--                    <path d="M18.6775 78.4895H18.6189L18.562 78.5031C11.9599 80.0709 7.88764 82.2079 5.24315 85.4954C3.43718 87.7405 2.32622 90.4884 1.50077 93.8681L1.50078 30.7592L1.50076 30.7562C1.48989 28.9213 1.59185 27.9432 1.99131 26.261C3.10973 21.8833 4.23143 18.6644 5.9337 15.8155C7.63222 12.9729 9.92635 10.4696 13.4284 7.5525C16.2862 5.49402 18.628 4.15647 21.1828 3.24547C23.7397 2.33377 26.536 1.8399 30.316 1.5H246.412C241.775 2.72829 238.466 4.385 236.098 6.85134C233.023 10.0541 231.611 14.5419 230.807 20.9482L230.803 20.9792V21.0105L230.803 57.4398L230.803 57.4534C230.845 58.9867 230.712 59.8396 230.313 61.4222L230.313 61.4231C228.936 66.924 227.148 70.4433 224.352 72.9571C221.556 75.4718 217.695 77.0331 212.048 78.4895H18.6775Z" fill="white" stroke="white"></path>-->
+<!--                    <rect x="1" y="1" width="65" height="31" fill="white"></rect>-->
+<!--                    <rect x="546" y="575" width="65" height="31" fill="white"></rect>-->
+<!--                    <path d="M1 606V1H611V606H1Z" stroke="white" stroke-width="2"></path>-->
+<!--                </svg>-->
+<!--            </div>-->
+
+<!--            <div class="absolute -bottom-20 lg:-bottom-36 lg:right-1/2 lg:translate-x-1/2 flex gap-10">-->
+<!--                <div onclick="" class="h-10 w-10 rounded-full bg-color2 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--                <div class="h-10 w-10 rounded-full bg-color3 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--                <div class="h-10 w-10 rounded-full bg-color3 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--                <div class="h-10 w-10 rounded-full bg-color3 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--                <div class="h-10 w-10 rounded-full bg-color3 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--                <div class="h-10 w-10 rounded-full bg-color3 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--                <div class="h-10 w-10 rounded-full bg-color3 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--                <div class="h-10 w-10 rounded-full bg-color3 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--                <div class="h-10 w-10 rounded-full bg-color3 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--                <div class="h-10 w-10 rounded-full bg-color3 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        <div class="col-span-6 lg:col-span-5 lg:flex lg:flex-col lg:justify-between lg:row-start-1">-->
+<!--            <div>-->
+
+<!--                <p class="text-28_22 m-xl:text-65_65">Hoyde House</p>-->
+<!--                <div class="flex gap-10 text-16_24 mt-16 m-xl:mt-32 ">-->
+<!--                    <div class="px-20 py-12 border border-2 border-color2 rounded-80">Реализован</div>-->
+<!--                    <div class="px-20 py-12 border border-2 border-color2 rounded-80">2009-2011</div>-->
+<!--                </div>-->
+<!--                <div class="flex gap-8 mt-20 text-color2 text-16_16 text-center mb-30  ">-->
+<!--                    <div class="flex relative w-[140px]">-->
+<!--                        <svg>-->
+<!--                            <use xlink:href="#rectangle6"></use>-->
+<!--                        </svg>-->
+<!--                        <p class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">Уникальное остекление</p>-->
+<!--                    </div>-->
+<!--                    <div class="flex relative w-[140px]">-->
+<!--                        <svg>-->
+<!--                            <use xlink:href="#ticket"></use>-->
+<!--                        </svg>-->
+<!--                        <p class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">Мраморные <br> полы</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--            </div>-->
+<!--            <p class="max-h-[256px] line-clamp-[10] text-16_24">-->
+<!--                Hoyde House — одноэтажный загородный дом, в котором можно проводить выходные круглый год и приезжать летом. Дом находится на участке с перепадом высот, что повлияло на его планировку. Благодаря этой особенности, мы смогли удачно разместить 2 террасы: внутреннюю, которая организовывает закрытый дворик, не просматриваемый со всех сторон. И нижнюю террасу с другой стороны.-->
+
+<!--            </p>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <div class="col-span-6 lg:col-span-12 grid grid-cols-6 lg:grid-cols-12 gap-x-20 gap-y-90 mt-90">-->
+<!--        <div class="relative col-span-6 lg:col-start-1 flex flex-col gap-20 ">-->
+<!--            <div class="flex snap-x snap-mandatory overflow-x-auto rounded-20 noScrollbar">-->
+<!--                <div class="snap-always snap-center shrink-0 w-full">-->
+<!--                    <img src="Houses/House5.jpg" class="w-full hover:scale-110 transition-all duration-500" alt="">-->
+<!--                </div>-->
+<!--                <div class="snap-always snap-center shrink-0 w-full">-->
+<!--                    <img src="Houses/House6.jpg" class="w-full hover:scale-110 transition-all duration-500" alt="">-->
+<!--                </div>-->
+<!--                <div class="snap-always snap-center shrink-0 w-full">-->
+<!--                    <img src="Houses/House7.jpg" class="w-full hover:scale-110 transition-all duration-500" alt="">-->
+<!--                </div>-->
+<!--                <div class="snap-always snap-center shrink-0 w-full">-->
+<!--                    <img src="Houses/House8.jpg" class="w-full hover:scale-110 transition-all duration-500" alt="">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="absolute left-0 top-0 w-full pointer-events-none">-->
+<!--                <svg xmlns="http://www.w3.org/2000/svg" class="w-full" viewBox="0 0 610 605" fill="none">-->
+<!--                    <path d="M600.843 444.911L600.828 444.925L427.329 595.38L427.328 595.381L423.331 598.877C423.33 598.877 423.33 598.878 423.329 598.878L423.329 598.879L423 598.502C418.136 602.796 413.957 604.537 407.32 605.5L600.843 444.911ZM600.843 444.911L600.858 444.896C604.589 441.072 607.109 437.896 608.765 434.376C609.509 432.796 610.075 431.153 610.5 429.361V577.487C610.044 582.739 609.274 585.633 606.574 590.741C603.177 595.491 600.21 598.736 596.46 601.017C592.708 603.298 588.13 604.64 581.468 605.5H410.242L600.843 444.911Z" fill="white" stroke="white"></path>-->
+<!--                    <rect x="550" y="547.84" width="61" height="57.983" fill="white"></rect>-->
+<!--                    <path d="M1 605.823V1H611V605.823H1Z" stroke="white" stroke-width="2"></path>-->
+<!--                </svg>-->
+<!--            </div>-->
+<!--            <div class="absolute -bottom-20 lg:-bottom-36 lg:right-1/2 lg:translate-x-1/2 flex gap-10">-->
+<!--                <div class="h-10 w-10 rounded-full bg-color2 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--                <div class="h-10 w-10 rounded-full bg-color3 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--                <div class="h-10 w-10 rounded-full bg-color3 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--                <div class="h-10 w-10 rounded-full bg-color3 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--                <div class="h-10 w-10 rounded-full bg-color3 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--                <div class="h-10 w-10 rounded-full bg-color3 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--                <div class="h-10 w-10 rounded-full bg-color3 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--                <div class="h-10 w-10 rounded-full bg-color3 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--                <div class="h-10 w-10 rounded-full bg-color3 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--                <div class="h-10 w-10 rounded-full bg-color3 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--                <div class="h-10 w-10 rounded-full bg-color3 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        <div class="col-span-6 lg:col-span-5 lg:col-start-8 lg:flex lg:flex-col lg:justify-between lg:row-start-1">-->
+<!--            <div>-->
+
+<!--                <p class="text-28_22 m-xl:text-65_65">Hanz House</p>-->
+<!--                <div class="flex gap-10 text-16_24 mt-16 m-xl:mt-32 ">-->
+<!--                    <div class="px-20 py-12 border border-2 border-color2 rounded-80">Реализован</div>-->
+<!--                    <div class="px-20 py-12 border border-2 border-color2 rounded-80">2009-2011</div>-->
+<!--                </div>-->
+<!--                <div class="flex gap-8 mt-20 text-color2 text-16_16 text-center mb-30  ">-->
+<!--                    <div class="flex relative w-[140px]">-->
+<!--                        <svg>-->
+<!--                            <use xlink:href="#twoSquads"></use>-->
+<!--                        </svg>-->
+<!--                        <p class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">Сквозная <br> система</p>-->
+<!--                    </div>-->
+<!--                    <div class="flex relative w-[140px]">-->
+<!--                        <svg>-->
+<!--                            <use xlink:href="#circle"></use>-->
+<!--                        </svg>-->
+<!--                        <p class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">Красное <br> дерево</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--            </div>-->
+<!--            <div class="max-h-[256px] line-clamp-[10] text-16_24">-->
+<!--                Hanz House — одноэтажный загородный дом, в котором можно проводить выходные круглый год и приезжать летом. Дом находится на участке с перепадом высот, что повлияло на его планировку.-->
+<!--                <br>-->
+<!--                <br>-->
+<!--                Благодаря этой особенности, мы смогли удачно разместить 2 террасы: внутреннюю, которая организовывает закрытый дворик,  не просматриваемый со всех сторон. И нижнюю террасу с другой стороны. Таким образом, дом разбивает участок на 2 части: мы получаем приватную зону для отдыха, барбекю. В послеобеденное время на эту сторону переходит солнце и здесь можно приятно загорать.-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <div class="col-span-6 lg:col-span-12 grid grid-cols-6 lg:grid-cols-12 gap-x-20 gap-y-90 mt-90">-->
+<!--        <div class="relative col-span-6 lg:col-start-7 flex flex-col gap-20 ">-->
+<!--            <div class="flex snap-x snap-mandatory overflow-x-auto rounded-20 noScrollbar">-->
+<!--                <div class="snap-always snap-center shrink-0 w-full">-->
+<!--                    <img src="Houses/House9.jpg" class="w-full hover:scale-110 transition-all duration-500" alt="">-->
+<!--                </div>-->
+<!--                <div class="snap-always snap-center shrink-0 w-full">-->
+<!--                    <img src="Houses/House1.jpg" class="w-full hover:scale-110 transition-all duration-500" alt="">-->
+<!--                </div>-->
+<!--                <div class="snap-always snap-center shrink-0 w-full">-->
+<!--                    <img src="Houses/House2.jpg" class="w-full hover:scale-110 transition-all duration-500" alt="">-->
+<!--                </div>-->
+<!--                <div class="snap-always snap-center shrink-0 w-full">-->
+<!--                    <img src="Houses/House3.jpg" class="w-full hover:scale-110 transition-all duration-500" alt="">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="absolute left-0 top-0 w-full pointer-events-none">-->
+<!--                <svg xmlns="http://www.w3.org/2000/svg" class="w-full" viewBox="0 0 612 607" fill="none">-->
+<!--                    <path d="M19.0412 1.5001H455.159C454.777 1.62567 454.408 1.76383 454.046 1.91537C452.082 2.73925 450.391 3.94695 448.199 5.60101L448.196 5.60312L160.196 226.103L160.184 226.113L160.172 226.123C157.025 228.859 154.451 230.605 151.578 231.596C148.707 232.587 145.491 232.838 141.038 232.502L141.019 232.5H141H20.5H20.4552L20.4111 232.508C13.9442 233.676 9.66248 235.376 6.64561 238.473C4.29175 240.889 2.74969 244.114 1.5 248.474V19.0642C2.96157 13.4622 4.46145 9.58126 7.00598 6.84667C9.53905 4.12441 13.1687 2.47641 19.0412 1.5001Z" fill="white" stroke="white"></path>-->
+<!--                    <rect x="1" y="1" width="100" height="100" fill="white"></rect>-->
+<!--                    <path d="M1 606V1H611V606H1Z" stroke="white" stroke-width="2"></path>-->
+<!--                </svg>-->
+<!--            </div>-->
+<!--            <div class="absolute -bottom-20 lg:-bottom-36 lg:right-1/2 lg:translate-x-1/2 flex gap-10">-->
+<!--                <div class="h-10 w-10 rounded-full bg-color2 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--                <div class="h-10 w-10 rounded-full bg-color3 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--                <div class="h-10 w-10 rounded-full bg-color3 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--                <div class="h-10 w-10 rounded-full bg-color3 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--                <div class="h-10 w-10 rounded-full bg-color3 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--                <div class="h-10 w-10 rounded-full bg-color3 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--                <div class="h-10 w-10 rounded-full bg-color3 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--                <div class="h-10 w-10 rounded-full bg-color3 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--                <div class="h-10 w-10 rounded-full bg-color3 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--                <div class="h-10 w-10 rounded-full bg-color3 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--                <div class="h-10 w-10 rounded-full bg-color3 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        <div class="col-span-6 lg:col-span-5 lg:flex lg:flex-col lg:justify-between lg:row-start-1">-->
+<!--            <div>-->
+
+<!--                <p class="text-28_22 m-xl:text-65_65">Otto House </p>-->
+<!--                <div class="flex gap-10 text-16_24 mt-16 m-xl:mt-32 ">-->
+<!--                    <div class="px-20 py-12 border border-2 border-color2 rounded-80">Реализован</div>-->
+<!--                    <div class="px-20 py-12 border border-2 border-color2 rounded-80">2009-2011</div>-->
+<!--                </div>-->
+<!--                <div class="flex gap-8 mt-20 text-color2 text-16_16 text-center mb-30  ">-->
+<!--                    <div class="flex relative w-[140px]">-->
+<!--                        <svg>-->
+<!--                            <use xlink:href="#ticket"></use>-->
+<!--                        </svg>-->
+<!--                        <p class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">Уникальное остекление</p>-->
+<!--                    </div>-->
+<!--                    <div class="flex relative w-[140px]">-->
+<!--                        <svg>-->
+<!--                            <use xlink:href="#rhombus"></use>-->
+<!--                        </svg>-->
+<!--                        <p class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">Домашний <br> кинотеатр</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--            </div>-->
+<!--            <p class=" max-h-[256px] line-clamp-[10] text-16_24">-->
+<!--                Otto House — одноэтажный загородный дом, в котором можно проводить выходные круглый год и приезжать летом. Дом находится на участке с перепадом высот, что повлияло на его планировку.-->
+<!--                <br>-->
+<!--                <br>-->
+<!--                Благодаря этой особенности, мы смогли удачно разместить 2 террасы: внутреннюю, которая организовывает закрытый дворик, не просматриваемый со всех сторон. И нижнюю террасу с другой стороны. Таким образом, дом разбивает участок на 2 части: мы получаем приватную зону для отдыха, барбекю. В послеобеденное время на эту сторону переходит солнце и здесь можно приятно загорать.-->
+<!--            </p>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <div class="col-span-6 lg:col-span-12 grid grid-cols-6 lg:grid-cols-12 gap-x-20 gap-y-90 mt-90">-->
+<!--        <div class="relative col-span-6 lg:col-start-1 flex flex-col gap-20 ">-->
+<!--            <div class="flex snap-x snap-mandatory overflow-x-auto rounded-20 noScrollbar">-->
+<!--                <div class="snap-always snap-center shrink-0 w-full">-->
+<!--                    <img src="Houses/House3.jpg" class="w-full hover:scale-110 transition-all duration-500" alt="">-->
+<!--                </div>-->
+<!--                <div class="snap-always snap-center shrink-0 w-full">-->
+<!--                    <img src="Houses/House6.jpg" class="w-full hover:scale-110 transition-all duration-500" alt="">-->
+<!--                </div>-->
+<!--                <div class="snap-always snap-center shrink-0 w-full">-->
+<!--                    <img src="Houses/House9.jpg" class="w-full hover:scale-110 transition-all duration-500" alt="">-->
+<!--                </div>-->
+<!--                <div class="snap-always snap-center shrink-0 w-full">-->
+<!--                    <img src="Houses/House8.jpg" class="w-full hover:scale-110 transition-all duration-500" alt="">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="absolute left-0 top-0 w-full pointer-events-none">-->
+<!--                <svg xmlns="http://www.w3.org/2000/svg" class="w-full" viewBox="0 0 612 607" fill="none">-->
+<!--                    <path d="M610.484 33V145.566C609.681 141.88 608.694 138.82 607.244 136.099C605.138 132.147 602.076 128.952 597.271 125.59L597.258 125.581L597.244 125.572C592.804 122.887 589.815 121.848 583.552 121.004L583.519 121H583.485H298.506C293.46 120.727 290.793 120.047 286.211 118.05C281.465 115.501 278.205 113.117 275.736 110.002C273.264 106.882 271.554 102.991 269.977 97.3737C269.661 96.0627 269.548 95.331 269.493 93.9899V30V29.9821L269.492 29.9642C269.261 26.7544 269.014 24.9434 267.967 21.8403C266.772 18.2672 265.503 15.6848 263.826 13.3764C262.152 11.0735 260.085 9.06356 257.324 6.62526L257.297 6.60076L257.266 6.58061C253.927 4.41351 251.245 2.95434 248.448 2.00751C247.888 1.8181 247.325 1.64954 246.752 1.5H581.968C586.143 1.78074 589.246 2.37509 592.142 3.57514C595.038 4.77522 597.756 6.59379 601.144 9.36752C603.742 12.0889 605.485 14.31 606.811 16.6964C608.138 19.083 609.061 21.6575 609.994 25.102C610.445 28.1755 610.544 29.8952 610.484 32.9905V33Z" fill="white" stroke="white"></path>-->
+<!--                    <rect x="541.986" y="1" width="68.9982" height="43" fill="white"></rect>-->
+<!--                    <path d="M1 606V1H611V606H1Z" stroke="white" stroke-width="2"></path>-->
+<!--                </svg>-->
+<!--            </div>-->
+<!--            <div class="absolute -bottom-20 lg:-bottom-36 lg:right-1/2 lg:translate-x-1/2 flex gap-10">-->
+<!--                <div class="h-10 w-10 rounded-full bg-color2 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--                <div class="h-10 w-10 rounded-full bg-color3 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--                <div class="h-10 w-10 rounded-full bg-color3 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--                <div class="h-10 w-10 rounded-full bg-color3 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--                <div class="h-10 w-10 rounded-full bg-color3 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--                <div class="h-10 w-10 rounded-full bg-color3 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--                <div class="h-10 w-10 rounded-full bg-color3 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--                <div class="h-10 w-10 rounded-full bg-color3 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--                <div class="h-10 w-10 rounded-full bg-color3 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--                <div class="h-10 w-10 rounded-full bg-color3 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--                <div class="h-10 w-10 rounded-full bg-color3 hover:border border-black border-opacity-30 transition-all cursor-pointer"></div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        <div class="col-span-6 lg:col-span-5 lg:col-start-8 lg:flex lg:flex-col lg:justify-between lg:row-start-1">-->
+<!--            <div>-->
+
+<!--                <p class="text-28_22 m-xl:text-65_65">Ulrich House</p>-->
+<!--                <div class="flex gap-10 text-16_24 mt-16 m-xl:mt-32 ">-->
+<!--                    <div class="px-20 py-12 border border-2 border-color2 rounded-80">Реализован</div>-->
+<!--                    <div class="px-20 py-12 border border-2 border-color2 rounded-80">2009-2011</div>-->
+<!--                </div>-->
+<!--                <div class="flex gap-8 mt-20 text-color2 text-16_16 text-center mb-30  ">-->
+<!--                    <div class="flex relative w-[140px]">-->
+<!--                        <svg>-->
+<!--                            <use xlink:href="#circle"></use>-->
+<!--                        </svg>-->
+<!--                        <p class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">Красное  <br> дерево</p>-->
+<!--                    </div>-->
+<!--                    <div class="flex relative w-[140px]">-->
+<!--                        <svg>-->
+<!--                            <use xlink:href="#bowknot"></use>-->
+<!--                        </svg>-->
+<!--                        <p class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">Теннисный <br> корт</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--            </div>-->
+<!--            <p class="max-h-[256px] line-clamp-[10] text-16_24">-->
+<!--                Ulrich House — одноэтажный загородный дом, в котором можно проводить выходные круглый год и приезжать летом. Дом находится на участке с перепадом высот, что повлияло на его планировку.-->
+<!--                <br>-->
+<!--                <br>-->
+<!--                Благодаря этой особенности, мы смогли удачно разместить 2 террасы: внутреннюю, которая организовывает закрытый дворик, не просматриваемый со всех сторон. И нижнюю террасу с другой стороны. Таким образом, дом разбивает участок на 2 части.-->
+<!--            </p>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <button class="col-span-6 lg:col-start-4 h-70 rounded-20 bg-color2 text-white text-18_24 mt-90 hover:bg-color6">-->
+<!--        Заказать проект-->
+<!--    </button>-->
+
+<!--</section>-->
+
+</body>
+</html>
